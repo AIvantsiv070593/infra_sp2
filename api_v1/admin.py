@@ -68,12 +68,12 @@ class TitleAdmin(admin.ModelAdmin):
 
 
 @admin.register(Category)
-class TitleAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     list_display = ("pk", "name", "slug")
 
 
 @admin.register(Genre)
-class TitleAdmin(admin.ModelAdmin):
+class GenreAdmin(admin.ModelAdmin):
     list_display = ("pk", "name", "slug")
 
 

@@ -31,5 +31,5 @@ wcwidth==0.1.9            # via pytest
 zipp==3.1.0               # via importlib-metadata
 gunicorn==20.0.4
 psycopg2-binary==2.8.6
-psycopg2==2.8.6cd
+psycopg2==2.8.6
 PyJWT==1.7.1
