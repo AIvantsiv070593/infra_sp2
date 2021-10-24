@@ -56,13 +56,20 @@ class CustomUser(AbstractUser):
     bio = models.CharField("bio", max_length=100, null=True)
     confirmation_code = models.CharField("code", max_length=50, default="null")
 
-    class ROLE_CHOICES(models.TextChoices):
-        USER = "U", ("user")
-        MODERATOR = "M", ("moderator")
-        ADMIN = "A", ("admin")
-
+    # class ROLE_CHOICES(models.TextChoices):
+    #     USER = "U", ("user")
+    #     MODERATOR = "M", ("moderator")
+    #     ADMIN = "A", ("admin")
+    ROLE_CHOICES = (
+        ("U", "user"),
+        ("M", "moderator"),
+        ("A", "admin")
+    )
+    # role = models.CharField(
+    #     max_length=50, choices=ROLE_CHOICES.choices, default=ROLE_CHOICES.USER
+    # )
     role = models.CharField(
-        max_length=50, choices=ROLE_CHOICES.choices, default=ROLE_CHOICES.USER
+        max_length=50, choices=ROLE_CHOICES, default="U"
     )
     objects = CustomUserManager()
 
